@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person_expenses</title>
+</head>
+<body>
+<form th:action="@{/addPerson}" method="post">
+  <label> Name:
+    <input th:field="*{newPerson.name}" placeholder="" type="text" id="name" title="name">
+  </label>
+  <label> Birtplace:
+    <input  th:field="*{newPerson.birthplace}" placeholder="" type="text" id="birthplace" title="birthplace">
+  </label>
+  <label> Time of birth:
+    <input  th:field="*{newPerson.birthdate}" placeholder="" type="date" id="birthdate" title="birthdate"
+            value="2023-01-01" min="1901-01-01" max="2023-10-05">
+  </label>
+
+  <label> Email address:
+    <input  th:field="*{newPerson.email}" placeholder="" type="text" id="email" title="email">
+  </label>
+
+  <button type="submit">Submit</button>
+
+</form>
+</body>
+</html>
